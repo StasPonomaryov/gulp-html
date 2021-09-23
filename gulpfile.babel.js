@@ -8,6 +8,7 @@ import plumber from 'gulp-plumber';
 import nodeSass from 'node-sass';
 import gulpSass from 'gulp-sass';
 import uglify from 'gulp-uglify-es';
+import purgeCss from 'gulp-purgecss';
 
 const sass = gulpSass(nodeSass);
 
@@ -87,6 +88,9 @@ export const buildStyles = () => {
     .pipe(plumber())
     .pipe(cssMin())
     .pipe(plumber.stop())
+    .pipe(purgeCss({
+      content: [path.src.html],
+    }))
     .pipe(gulp.dest(path.build.css));
 };
 

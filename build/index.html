@@ -5,6 +5,15 @@
 
     <title>Gulp jobs for developing in HTML+CSS+JS</title>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preload" href="./css/styles.css?v=1.0.0" as="style" />
+    <link rel="preload" href="./js/app.js" as="script" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/styles.css?v=1.0.0" rel="stylesheet" />
+
     <meta
       name="description"
       content="Gulp jobs for developing in HTML+CSS+JS"
@@ -38,38 +47,29 @@
       content="Gulp jobs for developing in HTML+CSS+JS"
     />
     <meta name="twitter:image" content="./images/image.jpg" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="./css/styles.css?v=1.0.0" as="style" />
-    <link rel="preload" href="./js/app.js" as="script" />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,500&display=swap" rel="stylesheet">
-    <link href="./css/styles.css?v=1.0.0" rel="stylesheet" />
   </head>
   <body>
     <div class="site-wrapper">
-      <header id="siteHeader">        
+      <header id="siteHeader">
         <div class="container">
           <div id="logoZone">
             <h1>Gulp jobs</h1>
             <h2>for developing in HTML+CSS+JS</h2>
-          </div>          
-        </div>        
+          </div>
+        </div>
       </header>
       <main id="siteContent">
         <section id="about">
-          <div class="container">
-            You are welcome!
-          </div>
+          <div class="container">You are welcome!</div>
         </section>
       </main>
       <footer id="siteFooter">
-          <div class="container text-end">
-            &copy; Stas Ponomaryov
-          </div>
+        <div class="container text-end">&copy; Stas Ponomaryov</div>
       </footer>
     </div>
     <script src="./js/app.js"></script>
     <script>
-        const lazyLoadInstance = new LazyLoad();
+      const lazyLoadInstance = new LazyLoad();
     </script>
   </body>
 </html>
