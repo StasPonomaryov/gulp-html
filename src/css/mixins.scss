@@ -1,0 +1,44 @@
+// Mixins
+@import "variable";
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: calculateRem($size);
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin cover-background($posx:false, $posy:false) {
+  background-repeat: no-repeat;
+  @if $posx {
+    background-position-x: $posx;
+  } @else {
+    background-position-x: center;
+  }
+  @if $posy {
+    background-position-y: $posy;
+  } @else {
+    background-position-y: center;
+  }
+  //background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+

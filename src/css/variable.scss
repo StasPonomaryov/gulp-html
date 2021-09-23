@@ -1,0 +1,17 @@
+// Main Variables
+
+// Color
+$main-bg: #fff;
+$main-text-color: #3E494E;
+$invert-text-color: $main-bg;
+$important: #c00;
+$accent-color: #4e4a75;
+$main-link: $main-text-color;
+// Margins
+$baseMargin: calculateRem(30px);
+$blockMargin: 6vh;
+$itemsMargin: 4.5vh;
+$lineMargin: calculateRem(20px);
+$slimMargin: calculateRem(15px);
+// Typography
+$default-font: 'IBM Plex Sans', sans-serif;
