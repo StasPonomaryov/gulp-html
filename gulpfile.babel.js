@@ -3,6 +3,7 @@ import gulp from 'gulp';
 import cssMin from 'gulp-clean-css';
 import concat from 'gulp-concat';
 import imageMin from 'gulp-imagemin';
+import webp from 'gulp-webp';
 import merge from 'merge-stream';
 import plumber from 'gulp-plumber';
 import nodeSass from 'node-sass';
@@ -66,6 +67,7 @@ export const buildImages = () => gulp.src(path.src.img, { since: gulp.lastRun(bu
     svgoPlugins: [{ removeViewBox: false }],
     interlaced: true,
   }))
+  .pipe(webp())
   .pipe(gulp.dest(path.build.images));
 
 export const buildScripts = () => gulp.src(path.src.js)
